@@ -1,0 +1,29 @@
+{
+    "title": "Input schema of the GhostListingScraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "jobBoardUrls": {
+            "title": "Job Board URLs",
+            "type": "array",
+            "description": "The list of job boards to scrape for identifying 'ghost' job listings.",
+            "editor": "requestListSources",
+            "prefill": [
+                {"url": "https://www.indeed.com/jobs?q=software+developer"},
+                {"url": "https://www.glassdoor.com/Job/software-developer-jobs-SRCH_KO0,18.htm"}
+            ]
+        },
+        "daysThreshold": {
+            "title": "Ghost Listing Threshold (in Days)",
+            "type": "integer",
+            "description": "The number of days a job post can remain active before it's flagged as stale or a 'ghost listing'.",
+            "default": 90
+        },
+        "dateSelector": {
+            "title": "Date Field Selector",
+            "type": "string",
+            "description": "CSS selector or path to find job post publication or last updated date in the HTML.",
+            "default": ".job-date, .job-posted-date, .job-age"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Ghost Listings Output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "columns": {
+            "type": "array",
+            "description": "Columns for viewing results",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "title",
+                    "company",
+                    "location",
+                    "dateField",
+                    "daysActive",
+                    "isGhostListing",
+                    "url"
+                ]
+            }
+        }
+    }
+}

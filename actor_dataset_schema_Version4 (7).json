@@ -1,0 +1,32 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Ghost Listings",
+            "transformation": {
+                "fields": [
+                    "title",
+                    "company",
+                    "location",
+                    "dateField",
+                    "daysActive",
+                    "isGhostListing",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": { "label": "Job Title", "format": "text" },
+                    "company": { "label": "Company", "format": "text" },
+                    "location": { "label": "Location", "format": "text" },
+                    "dateField": { "label": "Date Posted", "format": "text" },
+                    "daysActive": { "label": "Days Active", "format": "number" },
+                    "isGhostListing": { "label": "Ghost Listing", "format": "boolean" },
+                    "url": { "label": "URL", "format": "link" }
+                }
+            }
+        }
+    }
+}
